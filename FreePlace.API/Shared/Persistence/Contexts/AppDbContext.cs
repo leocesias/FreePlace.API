@@ -1,4 +1,5 @@
 ﻿using FreePlace.API.ParkingLots.Domain.Models;
+using FreePlace.API.Shared.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace FreePlace.API.Shared.Persistence.Contexts;
@@ -8,6 +9,8 @@ public class AppDbContext: DbContext
     public DbSet<Car> Cars { get; set; }
     public DbSet<Parking> Parkings { get; set; }
     
+    public DbSet<User> Users { get; set; }
+
     public AppDbContext(DbContextOptions options): base(options){}
 
     protected override void OnModelCreating(ModelBuilder builder)
@@ -30,6 +33,15 @@ public class AppDbContext: DbContext
         builder.Entity<Car>().Property(p => p.Plate).IsRequired().HasMaxLength(10);
         builder.Entity<Car>().Property(p => p.ParkedTime).IsRequired();
         
+        // User Entity Mapping
+        builder.Entity<User>().ToTable("Users");
+        builder.Entity<User>().HasKey(p => p.Id);
+        builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<User>().Property(p => p.LastName).IsRequired().HasMaxLength(40);
+        builder.Entity<User>().Property(p => p.Name).IsRequired().HasMaxLength(40);
+        builder.Entity<User>().Property(p => p.Age).IsRequired();
+        builder.Entity<User>().Property(p => p.Phone).IsRequired();
+
         //Relationships
         /*
         builder.Entity<Parking>()

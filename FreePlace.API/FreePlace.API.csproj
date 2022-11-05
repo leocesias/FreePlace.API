@@ -18,8 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Shared\Controllers" />
-      <Folder Include="Shared\Resources" />
+      <Folder Include="Booking" />
     </ItemGroup>
 
 </Project>
