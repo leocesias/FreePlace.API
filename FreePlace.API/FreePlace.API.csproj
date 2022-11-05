@@ -18,12 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="ParkingLots\Controllers" />
-      <Folder Include="ParkingLots\Mapping" />
-      <Folder Include="ParkingLots\Resources" />
       <Folder Include="Shared\Controllers" />
-      <Folder Include="Shared\Extensions" />
-      <Folder Include="Shared\Mapping" />
       <Folder Include="Shared\Resources" />
     </ItemGroup>
 
