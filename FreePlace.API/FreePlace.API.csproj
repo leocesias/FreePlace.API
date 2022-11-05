@@ -24,10 +24,8 @@
       <Folder Include="ParkingLots\Resources" />
       <Folder Include="ParkingLots\Services" />
       <Folder Include="Shared\Controllers" />
-      <Folder Include="Shared\Domain" />
       <Folder Include="Shared\Extensions" />
       <Folder Include="Shared\Mapping" />
-      <Folder Include="Shared\Persistence" />
       <Folder Include="Shared\Resources" />
     </ItemGroup>
 
