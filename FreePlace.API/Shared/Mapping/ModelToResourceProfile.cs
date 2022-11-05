@@ -10,5 +10,7 @@ public class ModelToResourceProfile: Profile
     public ModelToResourceProfile()
     {
         CreateMap<Car, CarResource>();
+
+        CreateMap<Parking, ParkingResource>();
     }
 }

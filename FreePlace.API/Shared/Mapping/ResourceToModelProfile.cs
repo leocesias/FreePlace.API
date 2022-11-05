@@ -9,5 +9,7 @@ public class ResourceToModelProfile: Profile
     protected ResourceToModelProfile()
     {
         CreateMap<SaveCarResource, Car>();
+
+        CreateMap<SaveParkingResource, Parking>();
     }
 }
