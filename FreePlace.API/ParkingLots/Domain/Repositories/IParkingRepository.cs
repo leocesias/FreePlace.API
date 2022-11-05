@@ -6,7 +6,7 @@ public interface IParkingRepository
 {
     Task<IEnumerable<Parking>> ListAsync();
     Task AddAsync(Parking parking);
-    Task<Car> FindByIdAsync(int id);
+    Task<Parking> FindByIdAsync(int id);
     void Update(Parking parking);
     void Remove(Parking parking);
 }
