@@ -7,7 +7,9 @@ public class Car
     public float ParkedTime { set; get; }
     
     //Relationships
-
+    
+    public int ParkingId { get; set; }
+    public Parking Parking { get; set; }
     public IList<Parking> Parkings { set; get; } = new List<Parking>();
 
 }

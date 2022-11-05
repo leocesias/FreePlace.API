@@ -17,11 +17,19 @@ public class CarRepository: BaseRepository, ICarRepository
         return await _context.Cars.ToListAsync();
     }
 
+    public async Task<IEnumerable<Car>> FindByParkingIdAsync(int parkingId)
+    {
+        return await _context.Cars
+            .Where(p=>p.ParkingId==parkingId)
+            .Include(p => p.Parking)
+            .ToListAsync();
+    }
+
     public async Task AddAsync(Car car)
     {
         await _context.Cars.AddAsync(car);
     }
-
+    
     public async Task<Car> FindByIdAsync(int id)
     {
         return await _context.Cars.FindAsync(id);
