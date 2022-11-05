@@ -16,6 +16,11 @@ public class ParkingService: IParkingService
         return await _parkingRepository.ListAsync();
     }
 
+    public async Task<IEnumerable<Parking>> ListByUserIdAsync(int userId)
+    {
+        return await _parkingRepository.FindByParkingIdAsync(userId);
+    }
+
     public async Task<ParkingResponse> SaveAsync(Parking parking)
     {
         try

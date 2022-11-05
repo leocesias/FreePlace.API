@@ -27,6 +27,14 @@ public class ParkingRepository: BaseRepository, IParkingRepository
         return await _context.Parkings.FindAsync(id);
     }
 
+    public async Task<IEnumerable<Parking>> FindByParkingIdAsync(int userId)
+    {
+        return await _context.Parkings
+            .Where(p => p.UserId == userId)
+            .Include(p => p.User)
+            .ToListAsync();
+    }
+
     public void Update(Parking parking)
     {
         _context.Parkings.Update(parking);

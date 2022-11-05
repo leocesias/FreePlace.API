@@ -18,7 +18,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Booking" />
+      <Folder Include="Booking\Controllers" />
+      <Folder Include="Booking\Domain\Repositories" />
+      <Folder Include="Booking\Domain\Services\Communication" />
+      <Folder Include="Booking\Persistence\Repositories" />
+      <Folder Include="Booking\Resources" />
+      <Folder Include="Booking\Services" />
     </ItemGroup>
 
 </Project>

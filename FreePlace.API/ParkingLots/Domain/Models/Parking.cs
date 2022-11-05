@@ -1,4 +1,6 @@
-﻿namespace FreePlace.API.ParkingLots.Domain.Models;
+﻿using FreePlace.API.Shared.Domain.Models;
+
+namespace FreePlace.API.ParkingLots.Domain.Models;
 
 public class Parking
 {
@@ -13,7 +15,7 @@ public class Parking
     public Car Car;
     
     //User from Shared
-    //public long UserId { set; get; }
-    //public User User;
+    public long UserId { set; get; }
+    public User User;
 
 }
