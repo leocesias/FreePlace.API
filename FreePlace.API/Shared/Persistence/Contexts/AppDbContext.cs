@@ -18,7 +18,7 @@ public class AppDbContext: DbContext
         builder.Entity<Parking>().ToTable("Parking");
         builder.Entity<Parking>().HasKey(p => p.Id);
         builder.Entity<Parking>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Entity<Parking>().Property(p => p.Capacity).IsRequired().HasMaxLength(2);
+        builder.Entity<Parking>().Property(p => p.Capacity).IsRequired();
         builder.Entity<Parking>().Property(p => p.Description).IsRequired().HasMaxLength(250);
         builder.Entity<Parking>().Property(p => p.Ubication).IsRequired().HasMaxLength(100);
         builder.Entity<Parking>().Property(p => p.Price).IsRequired();
