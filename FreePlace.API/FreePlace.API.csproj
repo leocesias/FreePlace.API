@@ -18,6 +18,11 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="ParkingLots\Controllers" />
+      <Folder Include="ParkingLots\Mapping" />
+      <Folder Include="ParkingLots\Persistence" />
+      <Folder Include="ParkingLots\Resources" />
+      <Folder Include="ParkingLots\Services" />
       <Folder Include="Shared" />
     </ItemGroup>
 
