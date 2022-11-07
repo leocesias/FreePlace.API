@@ -17,6 +17,7 @@ public class CarsController : ControllerBase
 {
     private readonly ICarService _carService;
     private readonly IMapper _mapper;
+    private readonly IActionResult _mapper;
 
     public CarsController(ICarService carService, IMapper mapper)
     {
