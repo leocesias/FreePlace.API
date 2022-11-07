@@ -26,28 +26,6 @@ public class CarsController : ControllerBase
         _carService = ICarService
         _carService = ICarService
         _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
     }
 
     [HttpGet]
