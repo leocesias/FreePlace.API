@@ -23,6 +23,31 @@ public class CarsController : ControllerBase
     {
         _carService = carService;
         _mapper = mapper;
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
+        _carService = ICarService
     }
 
     [HttpGet]
