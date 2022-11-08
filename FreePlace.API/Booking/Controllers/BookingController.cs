@@ -1,11 +1,8 @@
 ﻿using AutoMapper;
 using FreePlace.API.Booking.Domain.Models;
-using FreePlace.API.Booking.Domain.Repositories;
 using FreePlace.API.Booking.Domain.Services;
 using FreePlace.API.Booking.Resources;
-using FreePlace.API.ParkingLots.Domain.Models;
 using FreePlace.API.Shared.Extensions;
-using FreePlace.API.Shared.Resources;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FreePlace.API.Booking.Controllers;
