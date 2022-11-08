@@ -11,6 +11,7 @@ namespace FreePlace.API.Booking.Controllers;
 [Route("/api/v1/[controller]")]
 public class BookingController: ControllerBase
 {
+    
     private readonly IBookingService _bookingService;
     private readonly IMapper _mapper;
 

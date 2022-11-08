@@ -17,13 +17,4 @@
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Booking\Controllers" />
-      <Folder Include="Booking\Domain\Repositories" />
-      <Folder Include="Booking\Domain\Services\Communication" />
-      <Folder Include="Booking\Persistence\Repositories" />
-      <Folder Include="Booking\Resources" />
-      <Folder Include="Booking\Services" />
-    </ItemGroup>
-
 </Project>
