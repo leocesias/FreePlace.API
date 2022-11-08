@@ -1,4 +1,5 @@
-﻿using FreePlace.API.ParkingLots.Domain.Models;
+﻿using FreePlace.API.Booking.Domain.Models;
+using FreePlace.API.ParkingLots.Domain.Models;
 using FreePlace.API.Shared.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,9 +9,8 @@ public class AppDbContext: DbContext
 {
     public DbSet<Car> Cars { get; set; }
     public DbSet<Parking> Parkings { get; set; }
-    
     public DbSet<User> Users { get; set; }
-
+    public DbSet<Booked> Bookings { get; set; }
     public AppDbContext(DbContextOptions options): base(options){}
 
     protected override void OnModelCreating(ModelBuilder builder)
@@ -42,6 +42,13 @@ public class AppDbContext: DbContext
         builder.Entity<User>().Property(p => p.Age).IsRequired();
         builder.Entity<User>().Property(p => p.Phone).IsRequired();
 
+        //Booking Entity Mapping
+        builder.Entity<Booked>().ToTable("Bookings");
+        builder.Entity<Booked>().HasKey(p => p.Id);
+        builder.Entity<Booked>().Property(p=> p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Booked>().Property(p => p.StartDate).IsRequired();
+        builder.Entity<Booked>().Property(p => p.EndDate).IsRequired();
+        
         //Relationships
         /*
         builder.Entity<Parking>()
