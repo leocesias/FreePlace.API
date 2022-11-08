@@ -6,10 +6,7 @@ using FreePlace.API.Shared.Resources;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-
-
 namespace FreePlace.API.ParkingLots.Controllers;
-
 
 [ApiController]
 [Route("/api/v1/[controller]")]
@@ -18,14 +15,10 @@ public class CarsController : ControllerBase
     private readonly ICarService _carService;
     private readonly IMapper _mapper;
     
-
     public CarsController(ICarService carService, IMapper mapper)
     {
         _carService = carService;
         _mapper = mapper;
-        _carService = ICarService
-        _carService = ICarService
-        _carService = ICarService
     }
 
     [HttpGet]
