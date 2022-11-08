@@ -1,5 +1,6 @@
-﻿using System.Runtime.CompilerServices;
-using AutoMapper;
+﻿using AutoMapper;
+using FreePlace.API.Booking.Domain.Models;
+using FreePlace.API.Booking.Resources;
 using FreePlace.API.ParkingLots.Domain.Models;
 using FreePlace.API.Shared.Domain.Models;
 using FreePlace.API.Shared.Resources;
@@ -15,5 +16,7 @@ public class ModelToResourceProfile: Profile
         CreateMap<Parking, ParkingResource>();
 
         CreateMap<User, UserResource>();
+
+        CreateMap<Booked, BookingResource>();
     }
 }
