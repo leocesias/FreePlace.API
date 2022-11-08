@@ -9,6 +9,7 @@ public class AppDbContext: DbContext
 {
     public DbSet<Car> Cars { get; set; }
     public DbSet<Parking> Parkings { get; set; }
+
     public DbSet<User> Users { get; set; }
     public DbSet<Booked> Bookings { get; set; }
     public AppDbContext(DbContextOptions options): base(options){}
@@ -32,7 +33,7 @@ public class AppDbContext: DbContext
         builder.Entity<Car>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Car>().Property(p => p.Plate).IsRequired().HasMaxLength(10);
         builder.Entity<Car>().Property(p => p.ParkedTime).IsRequired();
-        
+
         // User Entity Mapping
         builder.Entity<User>().ToTable("Users");
         builder.Entity<User>().HasKey(p => p.Id);
@@ -48,7 +49,7 @@ public class AppDbContext: DbContext
         builder.Entity<Booked>().Property(p=> p.Id).IsRequired().ValueGeneratedOnAdd();
         builder.Entity<Booked>().Property(p => p.StartDate).IsRequired();
         builder.Entity<Booked>().Property(p => p.EndDate).IsRequired();
-        
+
         //Relationships
         /*
         builder.Entity<Parking>()

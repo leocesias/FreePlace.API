@@ -1,5 +1,4 @@
-﻿using FreePlace.API.Booking.Domain.Models;
-using FreePlace.API.Booking.Domain.Services.Communication;
+﻿using FreePlace.API.Booking.Domain.Services.Communication;
 
 namespace FreePlace.API.Booking.Domain.Services;
 

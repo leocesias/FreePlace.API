@@ -7,4 +7,5 @@ public class BookingResponse: BaseResponse<Booked>
 {
     public BookingResponse(string message) : base(message) {}
     public BookingResponse(Booked resource) : base(resource) {}
+
 }
