@@ -40,6 +40,11 @@ public class CarRepository: BaseRepository, ICarRepository
         _context.Cars.Update(car);
     }
 
+    public User FindById(int id)
+    {
+        return _context.Cars.Find(id);
+    }
+
     public void Remove(Car car)
     {
         _context.Cars.Remove(car);
