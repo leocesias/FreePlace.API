@@ -42,6 +42,7 @@ public class AppDbContext: DbContext
         builder.Entity<User>().Property(p => p.Name).IsRequired().HasMaxLength(40);
         builder.Entity<User>().Property(p => p.Age).IsRequired();
         builder.Entity<User>().Property(p => p.Phone).IsRequired();
+        builder.Entity<User>().Property(p => p.Username).IsRequired();
 
         //Booking Entity Mapping
         builder.Entity<Booked>().ToTable("Bookings");
