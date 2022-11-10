@@ -1,4 +1,5 @@
-﻿using FreePlace.API.ParkingLots.Domain.Models;
+﻿using System.Text.Json.Serialization;
+using FreePlace.API.ParkingLots.Domain.Models;
 
 namespace FreePlace.API.Shared.Domain.Models;
 
@@ -9,6 +10,10 @@ public class User
     public string LastName { set; get; }
     public short Age { set; get; }
     public long Phone { set; get; }
+    public string Username { set; get; }
+
+    [JsonIgnore]
+    public string PasswordHash { set; get; }
     
     //Relationships
 
