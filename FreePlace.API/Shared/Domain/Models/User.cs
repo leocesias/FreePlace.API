@@ -22,7 +22,8 @@ public class User
 
     public IList<Review> Reviews;
     public IList<Booked> Bookings;
-    public IList<Parking> Parkings { set; get; } = new List<Parking>();
-    public IList<Car> Cars { set; get; } = new List<Car>();
+    public IList<Parking> Parkings;
+    public IList<Car> Cars;
+    public Car Car;
     // Missing add Security, Booking and History ---
 }
