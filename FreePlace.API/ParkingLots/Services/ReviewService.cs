@@ -1,7 +1,7 @@
 ﻿using FreePlace.API.ParkingLots.Domain.Models;
+using FreePlace.API.ParkingLots.Domain.Repositories;
 using FreePlace.API.ParkingLots.Domain.Services;
 using FreePlace.API.ParkingLots.Domain.Services.Communication;
-using FreePlace.API.ReviewLots.Domain.Repositories;
 using FreePlace.API.Shared.Domain.Repositories;
 
 namespace FreePlace.API.ParkingLots.Services;
