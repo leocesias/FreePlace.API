@@ -1,6 +1,6 @@
 ﻿using FreePlace.API.ParkingLots.Domain.Models;
 
-namespace FreePlace.API.ReviewLots.Domain.Repositories;
+namespace FreePlace.API.ParkingLots.Domain.Repositories;
 
 public interface IReviewsRepository
 {
