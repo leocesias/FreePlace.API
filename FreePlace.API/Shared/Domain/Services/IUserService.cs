@@ -7,6 +7,7 @@ namespace FreePlace.API.Shared.Domain.Services;
 public interface IUserService
 {
     Task<AuthenticateResponse> Authenticate(AuthenticateRequest model);
+    Task<PaymentResponse> Payment(PaymentRequest model);
     Task<IEnumerable<User>> ListAsync();
     Task<User> GetByIdAsync(int id);
     Task RegisterAsync(RegisterRequest model);
