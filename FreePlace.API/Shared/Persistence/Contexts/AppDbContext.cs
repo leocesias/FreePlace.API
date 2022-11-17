@@ -12,6 +12,7 @@ public class AppDbContext: DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Booked> Bookings { get; set; }
     public DbSet<Review> Reviews { get; set; }
+    public DbSet<Payment> Payments { get; set; }
     public AppDbContext(DbContextOptions options): base(options){}
 
     protected override void OnModelCreating(ModelBuilder builder)
@@ -60,6 +61,12 @@ public class AppDbContext: DbContext
         builder.Entity<Review>().Property(p => p.Comment).IsRequired();
         builder.Entity<Review>().Property(p => p.likes).IsRequired();
         builder.Entity<Review>().Property(p => p.dislikes).IsRequired();
+
+        builder.Entity<Payment>().Property("Payments");
+        builder.Entity<Payment>().HasKey(p => p.Id);
+        builder.Entity<Payment>().Property(p=> p.Id).IsRequired().ValueGeneratedOnAdd();
+        builder.Entity<Payment>().Property(p => p.User).IsRequired();
+        builder.Entity<Payment>().Property(p => p.Description).IsRequired().HasMaxLength(100);
 
         //Relationships
         builder.Entity<Parking>().HasMany(p => p.Cars)
