@@ -32,7 +32,9 @@ public class ResourceToModelProfile: Profile
                     return true;
                 }
             ));
-        
+
+        CreateMap<PaymentRequest, User>();
+
         CreateMap<RegisterRequest, User>();
 
         CreateMap<SaveBookingResource, Booked>();
