@@ -46,6 +46,14 @@ public class UserController: ControllerBase
         return Ok(resources);
     }
 
+    [AllowAnonymous]
+    [HttpPost("to-suscribe")]
+    public async Task<ActionResult> Suscribe(PaymentRequest request)
+    {
+        var response = await _userService.Payment(request);
+        return Ok(response);
+    }
+
     /*
     [HttpGet]
     public async Task<IEnumerable<UserResource>> GetAllAsync()
