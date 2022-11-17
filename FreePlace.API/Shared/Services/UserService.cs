@@ -7,6 +7,8 @@ using FreePlace.API.Shared.Domain.Repositories;
 using FreePlace.API.Shared.Domain.Services;
 using BCryptNet = BCrypt.Net.BCrypt;
 using FreePlace.API.Shared.Domain.Services.Communication;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
+using Microsoft.IdentityModel.Abstractions;
 
 namespace FreePlace.API.Shared.Services;
 
@@ -40,6 +42,20 @@ public class UserService: IUserService
         // On Authentication successful
         var response = _mapper.Map<AuthenticateResponse>(user);
         response.Token = _jwtHandler.GenerateToken(user);
+        return response;
+    }
+
+    public async Task<PaymentResponse> Payment(PaymentRequest model)
+    {
+        var user = await _userRepository.FindByIdAsync(model.UserId);
+
+        if(model.Card <= model.Value)
+            throw new AppException("Your card have insufficient money.");
+
+        var response = _mapper.Map<PaymentResponse>(user);
+        response.Suscribed = true;
+        response.TransactionId = 12; // Generate method - 12 is just representative
+        response.Value = 30; // Value of subscription
         return response;
     }
 
