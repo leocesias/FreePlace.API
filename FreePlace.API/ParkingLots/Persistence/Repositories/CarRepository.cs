@@ -34,10 +34,20 @@ public class CarRepository: BaseRepository, ICarRepository
     {
         return await _context.Cars.FindAsync(id);
     }
-
+    public async Task<Car> FindByCarName (string name)
+    {
+        return await _context.Cars
+        .Include(p => p.Parking)
+        .FirstOrDefaultAsync(p => p.name == name)
+    }
     public void Update(Car car)
     {
         _context.Cars.Update(car);
+    }
+
+    public User FindById(int id)
+    {
+        return _context.Cars.Find(id);
     }
 
     public void Remove(Car car)
